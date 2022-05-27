@@ -42,9 +42,9 @@ html,body{
     position: relative;
 }
 
+/*
 .menu a{
     color: white;
-    opacity: 0.4;
     font-size: 24px;
     display: block;
     margin-bottom: 20px;
@@ -53,6 +53,31 @@ html,body{
 
 .menu a.selected{
     opacity: 1;
+}
+*/
+
+
+.links{
+  font-size: 24px;
+  margin-bottom: 20px;
+  display: block;
+  text-decoration: none;
+  color: aliceblue;
+  position: relative;
+}
+.links::after{
+    content: '';
+    position: absolute;
+    left: 23%;bottom: 0;
+    width: 55%;height: 2px;
+    background-color:blueviolet ;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .5s;
+}
+.links:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 .content{
